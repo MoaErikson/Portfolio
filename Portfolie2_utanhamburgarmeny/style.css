@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*General rules*/
+
+:root {
+    --main-text-color: white;
+    --button-color: rgb(46, 68, 141);
+    --nav-links: rgb(0, 0, 0);
+    --project1-color: rgb(47, 80, 47);
+    --project2-color: lightblue;
+    --project3-color:  lightcoral;
+    --project4-color: lightcyan;
+}
+
+html {
+    background-color: rgb(209, 218, 218);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+   /*
+img {
+ width: 100%;
+}
+*/
+
+/* Navbar */
+
+li, button, a {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: var(--nav-links);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 30px 7%;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+    color: var(--nav-links);
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a:hover {
+    color: darkgreen;
+}
+
+.top-nav a button {
+    margin-left: 30px;
+}
+
+/*Buttons style*/
+button {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    padding: 2rem 10rem 4rem 10rem;
+    width: 60%;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-height: auto;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.profile-text {
+    margin: auto;
+    padding: 5rem;
+}
+
+/*Laptop*/
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+    .profile {
+        margin: 0 auto;
+        padding: 1rem 3rem;
+    }
+    .profile-text {
+        padding: 3rem;
+    }
+    .profile-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/*Tablet*/
+@media only screen and (max-width: 769px) and (min-width: 425px) {
+    .profile {
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+    }
+    .profile-text {
+        padding: 2rem;
+    }
+    .profile-image {
+        padding-left: 1.5rem;
+    }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 425px) {
+.profile {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.profile-text {
+    padding: 0.5rem 0;
+    text-align: center;
+}
+}
+
+/* Project cards */
+.project-chapter {
+    max-width: 1440px; 
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+.project-one,
+.project-two,
+.project-three,
+.project-four {
+    display: flex;
+    box-shadow: 15px 10px 10px rgb(0, 0, 0, .15);
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 1rem;
+    align-items: center;
+    text-align: center;
+} 
+
+.project-one {
+    background-color: var(--project1-color);
+}
+
+.project-two {
+    background-color: var(--project2-color); 
+}
+
+.project-three {
+    background-color: var(--project3-color); 
+}
+
+.project-four {
+    background-color: var(--project4-color); 
+}
+
+.project-img img {
+    margin-left: auto;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.project-description {
+    padding: 4rem 3rem;
+}
+
+.project-title {
+    padding-bottom: 1rem;
+}
+
+.project-description a button {
+    margin-top: 2rem;
+}
+
+.project-one:hover,
+.project-two:hover,
+.project-three:hover,
+.project-four:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+/*Laptop*/
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+    .projects,
+    .project-chapter {
+        padding: 0.5rem 2rem;
+    }
+    .project-description {
+        padding: 0rem 4rem;
+    }
+}
+
+/*Tablet*/
+@media only screen and (max-width: 768px) and (min-width: 425px) {
+    .projects,
+    .project-chapter {
+        padding: 0.5rem 1.5rem;
+    }
+    .project-description {
+        padding: 0rem 1rem;
+    }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 425px) {
+    .projects,
+    .project-chapter {
+        padding: 0.5rem 0.5rem;
+    } 
+    .project-one,
+    .project-two,
+    .project-three,
+    .project-four {
+        flex-direction: column;
+    }
+    .project-description {
+        padding: 0.5rem 1rem;
+    }
+    .project-description a button {
+        margin-top: 0.5rem;
+    }
+    .project-img img {
+        padding: .2rem;
+        width: 80%;
+    }
+}
+
+/*Project sides*/
+
+/*Project header*/
+
+
+/*Project deskription*/
+.project-information {
+    padding: 0rem 15rem;
+}
+
+.project-summary {
+    display: flex;
+}
+
+.project-overview {
+    justify-content: space-between;
+    flex-basis: 70%;
+}
+
+.project-info {
+    margin-left: 5rem;
+    flex-basis: 30%;
+}
+
+.project-text {
+    padding-top: 0.5rem;
+}
+
+.chapter-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+}
+
+.info {
+    display: block;
+}
+
+.info h3 {
+    padding-bottom: 0.3rem;
+}
+
+.info p {
+    padding-bottom: 0.6rem;
+}
+
+.big-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+.project-1 {
+    color: var(--project1-color);
+}
+
+.project-2 {
+    color: var(--project2-color);
+}
+
+.project-3 {
+    color: var(--project3-color);
+}
+
+.project-4 {
+    color: var(--project4-color);
+} 
+
+/*Laptop*/
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+    .project-information {
+        padding: 0rem 5rem;
+    }
+    .project-info {
+        margin-left: 3rem;
+    }
+}
+
+/*Tablet*/
+@media only screen and (max-width: 768px) and (min-width: 425px) {
+    .project-information {
+        padding: 0rem 1rem;
+    }
+    .project-info {
+        margin-left: 2rem;
+    }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 425px) {
+    .project-information {
+        padding: 0;
+    }
+    .project-summary {
+        flex-direction: column;
+    }
+    .project-info {
+        margin: 1rem 0;
+        justify-content: flex-start;
+    }
+}
+
+/*More projects*/
+.more-projects h2 {
+    margin-left: 0.5rem;
+}
+
+.more-projects-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.project-box {
+    margin: 0.5rem;
+    position: relative;
+}
+
+.project-img {
+    display: block;
+    width: 100%;
+}
+
+.box-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.30s;
+    backdrop-filter: blur(5px);
+}
+
+.box-overlay:hover {
+    opacity: 1;
+    color: white;
+    border-radius: 10px;
+}
+
+.box-overlay .project-title {
+    font-size: 30px;
+}
+
+
+/*Laptop*/
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+    .more-projects-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        
+    }
+    .project-box {
+        margin: 0.5rem;
+        flex-grow: .5;
+    }
+}
+
+/*Tablet and mobile*/
+@media only screen and (max-width: 768px) and (min-width: 0px) {
+    .more-projects-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .project-box {
+        margin: 0.5rem;
+        flex-basis: 100%;
+        position: relative;
+    }
+    .project-img {
+        display: block;
+        width: 100%;
+    }
+    .project-img img {
+        width: 60%;
+        float: right;
+    }
+    .box-2 .project-img img {
+        float: left;
+    }
+    .box-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: none;
+        display: flex; 
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        opacity: 1;
+        transition: opacity 0.30s;
+        backdrop-filter: none;
+    }
+    .box-2 .box-overlay {
+        align-items: flex-end;
+    }
+    .project-text {
+            display: none;
+        }
+    .project-title {
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+}
+
